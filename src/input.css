@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Neon";
+  src: url("../public/fonts/monaspace-neon-var.ttf");
+}
+
+@layer base {
+  html {
+    font-family: "Neon", system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .card {
+    background-color: theme("colors.gray.100");
+    width: theme("width.5/6");
+    height: theme("height.5/6");
+    margin: theme("margin.4");
+    position: relative;
+    box-shadow: theme("boxShadow.sm");
+  }
+  .title {
+    font-size: theme("fontSize.3xl");
+    flex-basis: theme("flexBasis.full");
+    text-align: left;
+    padding-left: theme("padding.20");
+    padding-top: theme("padding.4");
+    padding-bottom: theme("padding.4");
+    margin-left: theme("margin.4");
+    margin-right: theme("margin.4");
+  }
+  .badge {
+    width: theme("width.fit");
+    padding: theme("padding.1");
+    height: theme("height.fit");
+    margin: theme("margin.10");
+    border-radius: theme("borderRadius.full");
+    display: flex;
+    align-items: center;
+  }
+  .t-border {
+    border-width: theme("borderWidth.2");
+    border-radius: theme("borderRadius.md");
+    border-color: theme("colors.green.500");
+    background-color: black;
+  }
+}
