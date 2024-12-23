@@ -1,9 +1,31 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./public/index.html"],
+  content: ["./public/index.html", "./public/main.js"],
   presets: [],
   darkMode: "media", // or 'class'
   theme: {
+    extend: {
+      colors: {
+        'terminal': '#33ff00',
+      },
+      keyframes: {
+        typing: {
+          to: {
+            width: "100%",
+          },
+        },
+        blinking: {
+          "50%": {
+            borderColor: "transparent",
+          },
+        },
+      },
+      animation: {
+        typing: "typing 1.5s steps(8, end)",
+        blinking: "blinking 1s step-end infinite",
+      },
+    },
+
     fontFamily: {
       neon: ["Neon", "sans-serif"],
     },

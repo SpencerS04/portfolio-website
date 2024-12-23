@@ -6,9 +6,9 @@
     <title>Spencer Stephen</title>
     <link rel="stylesheet" href="./output.css" />
   </head>
-  <body class="bg-neutral-950 text-green-500">
+  <body class="bg-neutral-950 text-terminal">
     <nav
-      class="z-10 fixed top-1/2 hover:top-16 block hover:inline-grid grid-rows-4 gap-y-10 h-10 hover:h-5/6 place-items-center w-10 hover:w-1/4 text-lg hover:border-r-2 hover:border-y-2 rounded-r-md border-green-500 group hover:bg-black"
+      class="z-10 fixed top-1/2 hover:top-16 block hover:inline-grid grid-rows-4 gap-y-10 h-10 hover:h-5/6 place-items-center w-10 hover:w-1/4 text-lg hover:border-r-2 hover:border-y-2 rounded-r-md border-terminal group hover:bg-black"
     >
       <div
         class="relative right-2 group-hover:hidden text-center font-bold t-border place-content-center border-l-0 rounded-l-none py-4 px-2"
@@ -40,16 +40,23 @@
     </nav>
     <section id="home" class="w-screen h-screen relative">
       <div class="absolute top-60 right-80 px-6 py-4 w-1/4">
-        <h1 class="absolute text-3xl my-4 t-border p-4 pb-14 pr-10">
-          Welcome!
-        </h1>
-        <h2
-          class="absolute left-16 top-24 text-lg my-4 p-4 w-full text-green-500 t-border"
-        >
-          My name is Spencer. <br />
+        <div class="t-border w-fit h-fit flex justify-center p-4 pr-24 pb-14">
+          <h1
+            id="welcome-header"
+            class="text-3xl my-4 overflow-hidden whitespace-nowrap mx-auto animate-typing border-r-2 border-terminal"
+          >
+            Welcome!
+          </h1>
+        </div>
+        <h2 class="absolute left-16 top-24 text-lg my-4 p-4 w-full t-border">
+          My name is Spencer.<br />
           I code things sometimes.
         </h2>
       </div>
+      <label class="switch">
+        <input type="checkbox" />
+        <span class="slider"></span>
+      </label>
     </section>
 
     <div id="space01" class="h-screen w-screen"></div>
@@ -248,6 +255,6 @@
         </div>
       </div>
     </section>
-    <script src="./carosel.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>
