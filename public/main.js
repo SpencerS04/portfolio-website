@@ -10,19 +10,40 @@ const nextButton = document.getElementById("carosel-next");
 const welcome = document.getElementById("welcome-header");
 
 //Variables for green toggle
-const greenClass = document.querySelectorAll('.text-terminal, .border-terminal');
+var tTerm = document.getElementsByClassName("text-terminal");
+var bTerm = document.getElementsByClassName("t-border");
+var tTermW = document.getElementsByClassName("text-white");
+var bTermW = document.getElementsByClassName("t-border-white");
+const greenCheck = document.getElementById("green-switch");
 
 //Functions for green toggle
-
-
+greenCheck.addEventListener("change", () => {
+  if (!greenCheck.checked) {
+    [...tTerm].forEach((c) => {
+      c.className += " text-white";
+      c.classList.remove("text-terminal");
+    });
+    [...bTerm].forEach((c) => {
+      c.className += " t-border-white";
+      c.classList.remove("t-border");
+    });
+  } else {
+    [...tTermW].forEach((c) => {
+      c.className += " text-terminal";
+      c.classList.remove("text-white");
+    });
+    [...bTermW].forEach((c) => {
+      c.className += " t-border";
+      c.classList.remove("t-border-white");
+    });
+  }
+});
 
 //Functions for typing animation
 welcome.addEventListener("animationend", () => {
   welcome.classList.remove("animate-typing");
   welcome.classList.add("animate-blinking");
 });
-
-
 
 //Project carosel functions
 backButton.addEventListener("click", () => {

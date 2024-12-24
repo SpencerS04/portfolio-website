@@ -1,12 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./public/index.html", "./public/main.js"],
+  content: ["./public/index.html", "./public/main.js", "./src/input.css"],
   presets: [],
   darkMode: "media", // or 'class'
   theme: {
     extend: {
       colors: {
-        'terminal': '#33ff00',
+        terminal: "#33ff00",
       },
       keyframes: {
         typing: {
