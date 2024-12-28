@@ -26,20 +26,10 @@
     flex-wrap: wrap;
     flex: 1 0 100%;
   }
-  .title {
-    font-size: theme("fontSize.3xl");
-    flex-basis: theme("flexBasis.full");
-    text-align: left;
-    padding-left: theme("padding.20");
-    padding-top: theme("padding.4");
-    padding-bottom: theme("padding.4");
-    margin-left: theme("margin.4");
-    margin-right: theme("margin.4");
-  }
   .badge {
-    width: theme("width.fit");
+    width: theme("width.16");
     padding: theme("padding.1");
-    height: theme("height.fit");
+    height: theme("height.16");
     margin: theme("margin.10");
     border-radius: theme("borderRadius.full");
     display: flex;
